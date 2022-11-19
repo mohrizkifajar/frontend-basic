@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 56px;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.nav-link {
+  align-items: center;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: rgb(73, 73, 73);
+}
+
+.nav-link.active {
+  background: rgb(73, 73, 73);
+}
+
+.content {
+  display: grid;
+  grid-template-areas: 'card1 card2 card3 card4';
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+}
+
+.card {
+  cursor: pointer;
+  margin: 0 8px;
+  transition: all 300ms 500ms ease;
+}
+
+.card-1 {
+  grid-area: card1;
+}
+
+.card-2 {
+  grid-area: card2;
+}
+
+.card-thumb {
+  border-radius: 8px;
+  height: 144px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card.zoom {
+  background: rgb(73, 73, 73);
+  border-radius: 8px;
+  padding-bottom: 16px;
+  scale: 1.25;
+  transform-origin: top;
+}
+
+.card.zoom .card-thumb {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card.zoom .card-title {
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.625;
+  margin-top: 8px;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+  transition: all 300ms 500ms ease;
+}
